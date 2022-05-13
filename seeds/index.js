@@ -30,7 +30,7 @@ const seedDB = async () => {
         const campPrice = Math.floor(Math.random() * 170 + 30);
         const camp = new Campground({
             // Creating temporary author. Must make your own user first
-            author: '627d5063e5474e1d9c24a560',
+            author: '627e9bd4c2af9545ef14edba',
             // Don't use seedHelpers() here b/c you want same array index for city+state.
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
             // Add geometry
