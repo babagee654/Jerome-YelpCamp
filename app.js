@@ -157,7 +157,7 @@ passport.deserializeUser(User.deserializeUser());
 
 // Define locals for flash, and login check
 app.use((req, res, next) => {
-    console.log(req.query);
+    // console.log(req.query);
     res.locals.successMsg = req.flash('success');
     res.locals.errorMsg = req.flash('error');
     // Must be after passport to enable req.user.
