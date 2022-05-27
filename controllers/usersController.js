@@ -1,13 +1,13 @@
 const User = require("../models/user.js");
 
 module.exports.renderRegister = (req, res) => {
-    res.render('users/register');
+    res.render('users/register', { page_name: "register" });
 }
 
 module.exports.register = async (req, res) => {
     try {
-        const {email, username, password} = req.body;
-        const user = new User({email, username});
+        const { email, username, password } = req.body;
+        const user = new User({ email, username });
         const registeredUser = await User.register(user, password);
         // console.log(registeredUser);
         req.login(registeredUser, err => {
@@ -23,7 +23,7 @@ module.exports.register = async (req, res) => {
 }
 
 module.exports.renderLogin = (req, res) => {
-    res.render('users/login');
+    res.render('users/login', { page_name: "login" });
 }
 
 module.exports.login = (req, res) => {
